@@ -20,6 +20,11 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        dotnet workload install maui-android
+        sudo apt-get install -y openjdk-11-jdk
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
