@@ -25,9 +25,7 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y openjdk-11-jdk
         dotnet workload install maui-android
-        dotnet workload install maui-ios
-        dotnet workload install maui-maccatalyst
-        dotnet workload install maui-windows        
+        dotnet workload install maui       
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
