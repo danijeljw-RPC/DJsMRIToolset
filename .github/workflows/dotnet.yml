@@ -25,7 +25,5 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y openjdk-11-jdk
         dotnet workload install maui-android
-    - name: Restore dependencies
-      run: dotnet restore
     - name: Build
-      run: dotnet build -c Release -f net8.0-windows10.0.19041.0 --no-restore
+      run: dotnet build -c Release -f net8.0-windows10.0.19041.0
